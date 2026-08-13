@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technical — nomadinternet.com</title>
+<link rel="stylesheet" href="cro_system.css">
+<style>:root{--green:#995c00;--teal:#ffb23d;--navy:#1f180c;--mid:#2d2213;--light:#3f311c;--muted:#a79c8b;--off:#e5e1dc;}</style></head>
+<body>
+<header>
+  <a class="logo-area" href="index.html" style="text-decoration:none">
+    <div class="logo-dot">N</div>
+    <div>
+      <div class="logo-text">nomadinternet.com</div>
+      <div class="logo-sub">CRO Recommendations — August 2026</div>
+    </div>
+  </a>
+  <nav class="nav"><a href="index.html">Overview</a><a href="social.html">Social</a><a href="roadmap.html">Roadmap</a><a href="technical.html" class="active">Technical</a><a href="appendix.html">Findings</a><a href="methodology.html">Method</a></nav>
+</header>
+
+<div class="wrap">
+  <div class="section">
+    <div class="eyebrow-label">Measured, not inferred</div>
+    <h2 class="section-title">Technical audit</h2>
+    <p class="section-intro">Everything on this page was measured directly against
+      nomadinternet.com on August 2026 and is reproducible.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Core Web Vitals</h2>
+    <div class="caveat"><strong>Field data unavailable</strong>the configured Google API key does not have the PageSpeed Insights API enabled; enable it in Google Cloud, or supply a dedicated key at u/admin/PAGESPEED_API_KEY</div>
+    
+  <h3 class="sub-title">Lab performance — Lighthouse, mobile emulation</h3>
+  <div class="tscroll"><table class="dtable">
+    <thead><tr><th>Check</th><th class="num">Result</th><th></th></tr></thead>
+    <tbody><tr><td>Performance score</td><td class='num'><span class='check-fail'>9 / 100</span></td><td>Weighted blend of the lab metrics below</td></tr><tr><td>Accessibility score</td><td class='num'><span class='check-warn'>79 / 100</span></td><td>Automated WCAG checks only — a floor, not a ceiling</td></tr><tr><td>SEO score</td><td class='num'><span class='check-pass'>92 / 100</span></td><td>Crawlability and on-page basics</td></tr></tbody></table></div>
+  <div class="tscroll" style="margin-top:10px"><table class="dtable">
+    <thead><tr><th>Metric</th><th class="num">Lab value</th><th class="num">Good</th><th>Verdict</th></tr></thead>
+    <tbody><tr><td>LCP</td><td class='num'>46.4 s</td><td class='num'>&le; 2500ms</td><td><span class='check-fail'>poor</span></td></tr><tr><td>CLS</td><td class='num'>0.73</td><td class='num'>&le; 0.1</td><td><span class='check-fail'>poor</span></td></tr><tr><td>TBT</td><td class='num'>2,140 ms</td><td class='num'>&le; 200ms</td><td><span class='check-fail'>poor</span></td></tr><tr><td>FCP</td><td class='num'>3.2 s</td><td class='num'>&le; 1800ms</td><td><span class='check-fail'>poor</span></td></tr><tr><td>SI</td><td class='num'>9.0 s</td><td class='num'>&le; 3400ms</td><td><span class='check-fail'>poor</span></td></tr></tbody></table></div>
+  <p class="section-intro" style="margin-top:10px">One synthetic load of the
+    homepage on an emulated mid-range phone. Lab data confirms the defect class
+    and is fully reproducible; it does not claim the 28-day real-user
+    percentile that field data would.</p>
+    
+  <h3 class="sub-title">Same audits, on the five pages that actually get
+    traffic</h3>
+  <p class="section-intro">Homepage first, then the URLs Google’s ranked-keywords
+    data says are the site’s real front doors. Lab vitals and an independent
+    on-page score for each — same measurements, same rules. A defect that
+    repeats across all five is a platform-wide problem; one that only shows
+    on the homepage is a template-specific fix.</p>
+  <div class="traffic-cards">
+      <div class="traffic-card">
+        <div class="traffic-head">
+          <a href="https://nomadinternet.com/blogs/countrynomad/guidelines-to-ensure-online-safety" target="_blank" rel="noopener"
+             class="traffic-path">/blogs/countrynomad/guidelines-to-ensure-online-safety</a>
+          <div class="traffic-driver">Ranks #69 for
+            “<strong>internet safety tip</strong>” · 301 000 monthly Google searches</div>
+        </div>
+        <div class="traffic-metrics">
+          <div class="tm"><div class="tm-lbl">Lab performance</div>
+            <div class="tm-val check-fail">—
+              <span class="tm-sub">/100</span></div></div>
+          <div class="tm"><div class="tm-lbl">LCP</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">CLS</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">TBT</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">FCP</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">On-page score</div>
+            <div class="tm-val">—
+              <span class="tm-sub">/100</span></div></div>
+        </div>
+      </div>
+      <div class="traffic-card">
+        <div class="traffic-head">
+          <a href="https://nomadinternet.com/blogs/countrynomad/guidelines-to-ensure-online-safety" target="_blank" rel="noopener"
+             class="traffic-path">/blogs/countrynomad/guidelines-to-ensure-online-safety</a>
+          <div class="traffic-driver">Ranks #67 for
+            “<strong>online safety tips</strong>” · 301 000 monthly Google searches</div>
+        </div>
+        <div class="traffic-metrics">
+          <div class="tm"><div class="tm-lbl">Lab performance</div>
+            <div class="tm-val check-fail">—
+              <span class="tm-sub">/100</span></div></div>
+          <div class="tm"><div class="tm-lbl">LCP</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">CLS</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">TBT</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">FCP</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">On-page score</div>
+            <div class="tm-val">—
+              <span class="tm-sub">/100</span></div></div>
+        </div>
+      </div>
+      <div class="traffic-card">
+        <div class="traffic-head">
+          <a href="https://nomadinternet.com/blogs/countrynomad/guidelines-to-ensure-online-safety" target="_blank" rel="noopener"
+             class="traffic-path">/blogs/countrynomad/guidelines-to-ensure-online-safety</a>
+          <div class="traffic-driver">Ranks #69 for
+            “<strong>safety online tips</strong>” · 301 000 monthly Google searches</div>
+        </div>
+        <div class="traffic-metrics">
+          <div class="tm"><div class="tm-lbl">Lab performance</div>
+            <div class="tm-val check-fail">—
+              <span class="tm-sub">/100</span></div></div>
+          <div class="tm"><div class="tm-lbl">LCP</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">CLS</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">TBT</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">FCP</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">On-page score</div>
+            <div class="tm-val">—
+              <span class="tm-sub">/100</span></div></div>
+        </div>
+      </div>
+      <div class="traffic-card">
+        <div class="traffic-head">
+          <a href="https://nomadinternet.com/blogs/countrynomad/guidelines-to-ensure-online-safety" target="_blank" rel="noopener"
+             class="traffic-path">/blogs/countrynomad/guidelines-to-ensure-online-safety</a>
+          <div class="traffic-driver">Ranks #85 for
+            “<strong>tips to be safe on the internet</strong>” · 301 000 monthly Google searches</div>
+        </div>
+        <div class="traffic-metrics">
+          <div class="tm"><div class="tm-lbl">Lab performance</div>
+            <div class="tm-val check-fail">—
+              <span class="tm-sub">/100</span></div></div>
+          <div class="tm"><div class="tm-lbl">LCP</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">CLS</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">TBT</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">FCP</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">On-page score</div>
+            <div class="tm-val">—
+              <span class="tm-sub">/100</span></div></div>
+        </div>
+      </div>
+      <div class="traffic-card">
+        <div class="traffic-head">
+          <a href="https://nomadinternet.com/blogs/countrynomad/content-delivery-network-cdn" target="_blank" rel="noopener"
+             class="traffic-path">/blogs/countrynomad/content-delivery-network-cdn</a>
+          <div class="traffic-driver">Ranks #38 for
+            “<strong>cdn service</strong>” · 60 500 monthly Google searches</div>
+        </div>
+        <div class="traffic-metrics">
+          <div class="tm"><div class="tm-lbl">Lab performance</div>
+            <div class="tm-val check-fail">—
+              <span class="tm-sub">/100</span></div></div>
+          <div class="tm"><div class="tm-lbl">LCP</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">CLS</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">TBT</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">FCP</div>
+            <div class="tm-val">—</div></div>
+          <div class="tm"><div class="tm-lbl">On-page score</div>
+            <div class="tm-val">—
+              <span class="tm-sub">/100</span></div></div>
+        </div>
+      </div></div>
+    
+  <h3 class="sub-title">Independent second opinion — DataForSEO page audit</h3>
+  <div class="tscroll"><table class="dtable"><tbody>
+    <tr><td>On-page score</td><td class="num">93.41 / 100</td>
+      <td>DataForSEO's own crawler, different infrastructure than this audit's</td></tr>
+    <tr><td>Time to interactive</td><td class="num">801 ms</td>
+      <td>Their crawler's desktop load — compare with the mobile lab numbers above</td></tr>
+    <tr><td>DOM complete</td><td class="num">2 534 ms</td>
+      <td>Full document parse time</td></tr>
+    <tr><td>Scripts on page</td><td class="num">71</td>
+      <td>Independent count — corroborates the script-weight measurement</td></tr>
+    <tr><td>DOM size</td><td class="num">514 KB</td>
+      <td>Bigger documents parse slower on cheap phones</td></tr>
+    <tr><td>Structural flags</td><td>none raised</td>
+      <td>Duplicate/broken checks from their crawl</td></tr>
+  </tbody></table></div>
+    
+  <h3 class="sub-title">Domain, stack &amp; authority</h3>
+  <div class="tscroll"><table class="dtable"><tbody><tr><td>Domain age</td><td class='num'>14.1 years</td><td>Registered 2012-06-19 (NameCheap, Inc.) — longevity is a quiet trust signal</td></tr><tr><td>Detected technologies</td><td>Chargebee, Cloudflare, HTTP/3, Shopify, Unpkg, jQuery</td><td>From public fingerprints — informs which fixes are platform-native vs custom work</td></tr><tr><td>Backlink domain rank</td><td class='num'>350 / 1000</td><td>Link-graph authority; context for how hard SERP real estate is to move</td></tr><tr><td>Referring domains</td><td class='num'>1 548</td><td>15 295 total backlinks; spam score 10 / 100</td></tr><tr><td>Organic keywords ranked</td><td class='num'>3 067</td><td>294 in Google's top 10; ≈15 511 est. monthly organic visits (DataForSEO model)</td></tr></tbody></table></div>
+    
+  <h3 class="sub-title">Message match — search snippet vs landing headline</h3>
+  <p class="section-intro">The brand's own Google snippets against the homepage
+    headline layer (title, H1s, primary CTAs — currently
+    “Reliable Internet That Works Anywhere in the U.S. / Internet That Just Works”). A promise that appears in the snippet
+    but not in the headline is a scent break at the very first click.
+    Token comparison, computed — not a model's reading.</p>
+  <div class="tscroll"><table class="dtable">
+    <thead><tr><th>Search snippet</th><th class="num">Headline overlap</th>
+      <th>Promises missing from headline</th></tr></thead>
+    <tbody><tr><td>Nomad Internet | Unlimited, High-Speed Wireless Internet for ...</td><td class='num'>100%</td><td><span class='check-pass'>none</span></td></tr></tbody></table></div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Speed &amp; delivery</h2>
+    <div class="tscroll"><table class="dtable">
+      <thead><tr><th>Check</th><th class="num">Measured</th><th>Why it matters</th></tr></thead>
+      <tbody>
+    <tr><td>Server response (TTFB proxy)</td>
+      <td class="num"><span class="check-pass">257 ms</span></td>
+      <td>Under 800ms is healthy</td></tr>
+    <tr><td>HTML document weight</td><td class="num">403 KB</td>
+      <td>Every byte is parsed before first paint</td></tr>
+    <tr><td>Scripts loaded</td>
+      <td class="num">33 inline + 32 external</td>
+      <td>The usual root cause of slow interactivity</td></tr>
+    <tr><td>Compression</td><td><span class="check-pass">gzip</span></td>
+      <td>gzip / brotli on HTML responses</td></tr>
+    <tr><td>HTTPS</td><td><span class="check-pass">pass</span></td><td>With redirect from http://</td></tr></tbody></table></div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Search &amp; metadata</h2>
+    
+    <div class="tscroll"><table class="dtable">
+      <thead><tr><th>Check</th><th>Status</th><th>Notes</th></tr></thead>
+      <tbody>
+    <tr><td>Title tag</td><td><span class="check-fail">missing</span></td>
+      <td>15–60 characters recommended</td></tr>
+    <tr><td>Meta description</td><td><span class="check-pass">151 chars</span></td>
+      <td>70–160 characters recommended</td></tr>
+    <tr><td>Canonical URL</td><td><span class="check-pass">pass</span></td><td>Prevents duplicate-content splits</td></tr>
+    <tr><td>Open Graph (og:title / og:image)</td><td><span class="check-fail">missing</span></td>
+      <td>Controls link previews when shared</td></tr>
+    <tr><td>Structured data (JSON-LD)</td><td><span class="check-pass">pass</span></td>
+      <td>Enables rich results in search</td></tr>
+    <tr><td>Indexable</td><td><span class="check-pass">yes</span></td>
+      <td>no robots meta restrictions</td></tr>
+    <tr><td>robots.txt</td><td><span class="check-pass">pass</span></td>
+      <td>References sitemap</td></tr>
+    <tr><td>sitemap.xml</td><td><span class="check-pass">pass</span></td>
+      <td>Crawl coverage for search engines</td></tr></tbody></table></div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Security headers</h2>
+    <div class="tscroll"><table class="dtable">
+      <thead><tr><th>Header</th><th>Status</th><th>Protects against</th></tr></thead>
+      <tbody><tr><td>CSP</td><td><span class="check-pass">pass</span></td><td>Blocks injected scripts (XSS)</td></tr><tr><td>HSTS</td><td><span class="check-pass">pass</span></td><td>Forces HTTPS on every future visit</td></tr><tr><td>Referrer-Policy</td><td><span class="check-fail">missing</span></td><td>Controls what leaks in the Referer header</td></tr><tr><td>X-Frame-Options</td><td><span class="check-fail">missing</span></td><td>Prevents clickjacking via iframes</td></tr><tr><td>Permissions-Policy</td><td><span class="check-fail">missing</span></td><td>Limits camera/mic/geolocation access</td></tr><tr><td>X-Content-Type-Options</td><td><span class="check-pass">pass</span></td><td>Stops MIME-type sniffing</td></tr></tbody></table></div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Accessibility</h2>
+    <div class="tscroll"><table class="dtable">
+      <thead><tr><th>Check</th><th class="num">Count</th><th>Standard</th></tr></thead>
+      <tbody>
+    <tr><td>Buttons without an accessible name</td>
+      <td class="num">5 / 46</td>
+      <td>WCAG 2.2 — 4.1.2 Name, Role, Value</td></tr>
+    <tr><td>Images missing alt text</td>
+      <td class="num">1 / 66</td>
+      <td>WCAG 2.2 — 1.1.1 Non-text Content</td></tr>
+    <tr><td>Unlabelled form inputs</td>
+      <td class="num">0 / 5</td>
+      <td>WCAG 2.2 — 3.3.2 Labels or Instructions</td></tr>
+    <tr><td>Links without text</td>
+      <td class="num">10 / 79</td>
+      <td>Screen readers announce these as "link"</td></tr></tbody></table></div>
+  </div>
+</div>
+<div class="footer">
+  Prepared by <strong>The CRO Panel</strong> · <a href="mailto:"></a> · <a href="methodology.html">Method &amp; confidence</a>
+</div>
+<div class="modal-overlay" id="modal-root"><div class="modal-box"></div></div>
+<script>
+(function(){
+  var root=document.getElementById('modal-root');
+  function close(){root.classList.remove('open');}
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-m]');
+    if(b){var t=document.getElementById('m-'+b.getAttribute('data-m'));
+      if(t){root.querySelector('.modal-box').innerHTML=
+        '<button class="modal-close" aria-label="Close">\u00d7</button>'+t.innerHTML;
+        root.classList.add('open');}return;}
+    if(e.target.closest('.modal-close')||e.target===root)close();
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  /* The miniature is markup authored at 1280px, scaled to the card width.
+     Real screenshots on a narrow viewport are stacked at full width instead,
+     so scaling them would shrink them to about a third of the card. The inline
+     transform has to be cleared as well as skipped, because a resize past the
+     breakpoint leaves the previous value behind. */
+  function scale(){
+    var stack=window.matchMedia('(max-width: 700px)').matches;
+    document.querySelectorAll('.card-preview .preview-inner').forEach(function(el){
+      var host=el.parentElement;if(!host)return;
+      if(stack&&el.classList.contains('photo')){
+        el.style.transform='';host.style.height='';return;}
+      var w=host.clientWidth;if(!w)return;
+      var s=w/1280;el.style.transform='scale('+s+')';
+      host.style.height=Math.round(514*s)+'px';});
+  }
+  scale();window.addEventListener('resize',scale);
+  function pos(){
+    document.querySelectorAll('.shot-scroll[data-frac]').forEach(function(el){
+      var img=el.querySelector('img');
+      var go=function(){var f=parseFloat(el.getAttribute('data-frac'))||0;
+        el.scrollTop=f*(el.scrollHeight-el.clientHeight);};
+      if(img&&!img.complete){img.addEventListener('load',go);}else{go();}
+    });
+  }
+  pos();
+})();
+</script>
+</body>
+</html>
