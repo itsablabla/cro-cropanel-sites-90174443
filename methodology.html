@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Method — nomadinternet.com</title>
+<link rel="stylesheet" href="cro_system.css">
+<style>:root{--green:#995c00;--teal:#ffb23d;--navy:#1f180c;--mid:#2d2213;--light:#3f311c;--muted:#a79c8b;--off:#e5e1dc;}</style></head>
+<body>
+<header>
+  <a class="logo-area" href="index.html" style="text-decoration:none">
+    <div class="logo-dot">N</div>
+    <div>
+      <div class="logo-text">nomadinternet.com</div>
+      <div class="logo-sub">CRO Recommendations — August 2026</div>
+    </div>
+  </a>
+  <nav class="nav"><a href="index.html">Overview</a><a href="social.html">Social</a><a href="roadmap.html">Roadmap</a><a href="technical.html">Technical</a><a href="appendix.html">Findings</a><a href="methodology.html" class="active">Method</a></nav>
+</header>
+
+<div class="wrap-narrow">
+  <div class="section">
+    <div class="eyebrow-label">Method</div>
+    <h2 class="section-title">Pipeline architecture</h2>
+    <p class="section-intro">A multi-agent audit system: parallel specialist analysis over a
+      rendered crawl, deterministic verification and scoring, and a QA-gated render path.
+      Model output is treated as untrusted input at every boundary.</p>
+    
+    <div class="trace">
+      <div class="trace-step"><div class="t-name">1 · Rendered crawl</div>
+        <div class="t-detail">Headless-rendered fetch of ['/', '/pages/state-florida-residential-wireless-internet-service', '/pages/plans', '/pages/rural-internet', '/plans'] pages (desktop + mobile
+        viewport) with full-page screenshot capture. Link graph scored for commercial intent;
+        structured extraction of headings, CTAs, forms, nav and prices. <span class="mono">0 tokens.</span></div></div>
+      <div class="trace-step"><div class="t-name">2 · Parallel analyst fan-out</div>
+        <div class="t-detail">7 independent analysts run concurrently — six
+        heuristic dimensions (funnel path, message clarity, form friction, trust, pricing
+        transparency, navigation) plus one deterministic measurement pass (Chrome UX Report
+        field data, WCAG checks, security headers, SEO metadata, response timing). Each
+        heuristic analyst must quote live page copy as evidence; findings without evidence
+        are rejected downstream.</div></div>
+      <div class="trace-step"><div class="t-name">2b · Crawl-integrity gate</div>
+        <div class="t-detail">6 absence claim(s) on incompletely-rendered pages were discarded. Bot-detection interstitials and
+        script-blocked widget fallbacks produce text a real visitor never sees; any finding
+        built on such text describes the crawler's experience, not a customer's, and is
+        discarded before synthesis. <span class="mono">0 tokens.</span></div></div>
+      <div class="trace-step"><div class="t-name">3 · Synthesis with provenance</div>
+        <div class="t-detail">Findings merged and de-duplicated. Measured findings bypass the
+        merge — facts are never reworded by a model. Analyst attribution survives, producing
+        the "flagged by N of 7" agreement signal.</div></div>
+      <div class="trace-step"><div class="t-name">4 · Deterministic scoring</div>
+        <div class="t-detail">PXL prioritisation, effort brackets, opportunity ranges and
+        two-proportion z-test sample sizes are pure arithmetic
+        (<span class="mono">α=0.05, power=0.80</span>). No model produces a number a reader
+        might act on.</div></div>
+      <div class="trace-step"><div class="t-name">5 · Mockup render + QA gate</div>
+        <div class="t-detail">Before/after mockups generated per finding, then validated by a
+        two-layer gate: deterministic structural checks (missing columns, overflow tokens,
+        placeholder copy, unsafe markup) plus a model review. Failures are regenerated once
+        with their defect list; a second failure drops the mockup rather than shipping it
+        broken. All generated markup is sanitized — anchors, scripts, inline styles and
+        off-system classes are stripped.</div></div>
+      <div class="trace-step"><div class="t-name">6 · Assembly + exports</div>
+        <div class="t-detail">Static report generation with the client's extracted brand
+        accent, plus CSV/JSON backlog, PDF summary and PPTX deck. <span class="mono">0 tokens.</span></div></div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2 class="section-title">Inference trace</h2>
+    <p class="section-intro">Every model call in this run. Deterministic stages
+      (crawling, measurement, scoring, sizing) consume zero tokens by design.</p>
+    <div class="tscroll"><table class="dtable">
+      <thead><tr><th>Stage</th><th>Model</th><th class="num">Calls</th>
+        <th class="num">Tokens in</th><th class="num">Tokens out</th><th class="num">Inference time</th></tr></thead>
+      <tbody><tr><td>Synthesis</td><td>deepseek/deepseek-chat</td><td class='num'>1</td><td class='num'>2,417</td><td class='num'>2,096</td><td class='num'>10.8s</td></tr><tr><td>Prioritization</td><td>gemini/gemini-2.5-flash</td><td class='num'>1</td><td class='num'>4,933</td><td class='num'>8,800</td><td class='num'>36.5s</td></tr><tr><td>Mockup planning</td><td>deepseek/deepseek-chat</td><td class='num'>6</td><td class='num'>7,393</td><td class='num'>1,046</td><td class='num'>12.3s</td></tr>
+      <tr><td><strong>Total</strong></td><td></td><td class="num"><strong>8</strong></td>
+        <td class="num"><strong>14,743</strong></td><td class="num"><strong>11,942</strong></td>
+        <td class="num"><strong>59.6s</strong></td></tr></tbody></table></div>
+  </div>
+  <div class="section">
+    <h2 class="section-title">Toolchain</h2>
+    <div class="tscroll"><table class="dtable">
+      <thead><tr><th>Layer</th><th>Tooling</th></tr></thead>
+      <tbody>
+        <tr><td>Crawl &amp; capture</td><td>Headless rendered crawling with screenshot capture, desktop + mobile viewports</td></tr>
+        <tr><td>Field performance</td><td>Chrome UX Report (real-user p75) via the PageSpeed Insights API</td></tr>
+        <tr><td>Static analysis</td><td>Deterministic DOM, metadata, security-header and robots/sitemap checks</td></tr>
+        <tr><td>Inference</td><td>Multi-provider LLM routing with automatic failover; per-call token accounting above</td></tr>
+        <tr><td>Statistics</td><td>Two-proportion z-test sample sizing; severity-decay surface grading</td></tr>
+        <tr><td>Orchestration</td><td>Parallel DAG execution, per-stage isolation, evidence-preserving merges</td></tr>
+      </tbody></table></div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Evidence boundaries</h2>
+    <div class="tscroll"><table class="dtable">
+      <thead><tr><th>Evidence type</th><th>Available in this run</th></tr></thead>
+      <tbody>
+        <tr><td>Live page content and structure</td><td class="yes">Yes — rendered crawl</td></tr>
+        <tr><td>Core Web Vitals (real users)</td><td class="no">No — the configured Google API key does not have the PageSpeed Insights API enabled; enable it </td></tr>
+        <tr><td>Accessibility / security / SEO measurement</td><td class="yes">Yes — deterministic</td></tr>
+        <tr><td>Mobile rendering</td><td class="yes">Yes — separate viewport pass</td></tr>
+        <tr><td>Analytics / funnel drop-off</td><td class="no">No — no account access</td></tr>
+        <tr><td>Session recordings, heatmaps, user testing</td><td class="no">No</td></tr>
+      </tbody></table></div>
+    <div class="caveat" style="margin-top:18px">
+      <strong>Epistemics</strong>
+      Findings marked <em>verified</em> are reproducible measurements. Everything else is
+      structured expert inspection — a hypothesis with quoted evidence, which is exactly why
+      the PXL evidence questions score it at zero. Opportunity figures are assumption-bounded
+      ranges, never forecasts: across ~127,000 experiments, roughly 12% produced a significant
+      win, and winners systematically overstate their true effect.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">PXL rubric</h2>
+    <div class="tscroll"><table class="dtable">
+      <thead><tr><th>Question</th><th class="num">Weight</th><th>Origin</th></tr></thead>
+      <tbody><tr><td>Is the change above the fold?</td><td class="num">1</td><td>Standard PXL</td></tr><tr><td>Is the change noticeable in under 5 seconds?</td><td class="num">2</td><td>Standard PXL</td></tr><tr><td>Does it add or remove an element?</td><td class="num">1</td><td>Standard PXL</td></tr><tr><td>Does it run on a high-traffic page?</td><td class="num">1</td><td>Standard PXL</td></tr><tr><td>Discovered via user testing?</td><td class="num">1</td><td>Local extension</td></tr><tr><td>Discovered via qualitative feedback (survey, support)?</td><td class="num">1</td><td>Local extension</td></tr><tr><td>Supported by heatmaps or session recordings?</td><td class="num">1</td><td>Local extension</td></tr><tr><td>Found via digital analytics or real-user field data?</td><td class="num">1</td><td>Local extension</td></tr><tr><td>Verified by direct technical measurement?</td><td class="num">1</td><td>Local extension</td></tr></tbody></table></div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Benchmarks cited</h2>
+    <ul class="sources"><li><a href="https://baymard.com/lists/cart-abandonment-rate">Baymard Institute</a> — <strong>70.19%</strong><span class="claim">Average documented online shopping cart abandonment rate, a meta-analysis of roughly 50 separate studies.</span></li><li><a href="https://baymard.com/blog/checkout-flow-average-form-fields">Baymard Institute</a> — <strong>11.3 form fields</strong><span class="claim">Average checkout asks for 11.3 form fields across 5.1 steps; a well-designed checkout needs only 6-8.</span></li><li><a href="https://baymard.com/research/checkout-usability">Baymard Institute</a> — <strong>~35%</strong><span class="claim">65% of sites score mediocre or worse on checkout UX; correcting checkout usability could lift conversion by roughly 35%.</span></li><li><a href="https://www.deloitte.com/ie/en/services/consulting/research/milliseconds-make-millions.html">Deloitte / Google</a> — <strong>+8.4%</strong><span class="claim">A 0.1 second improvement in mobile site speed increased retail conversions 8.4% and average order value 9.2%.</span></li><li><a href="https://www.optimizely.com/field-notes/guides/127000-experiments">Optimizely</a> — <strong>~12%</strong><span class="claim">Across 127,000 experiments, 12% produced a statistically significant improvement on the primary metric; a healthy programme win rate is 10-30%.</span></li><li><a href="https://web.dev/articles/vitals">web.dev</a> — <strong>LCP 2.5s / INP 200ms / CLS 0.1</strong><span class="claim">A page passes Core Web Vitals only if all three metrics meet the &#x27;good&#x27; threshold at the 75th percentile of real users.</span></li><li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/">W3C</a> — <strong>WCAG 2.2 AA</strong><span class="claim">Four principles, 13 guidelines, testable success criteria at levels A, AA and AAA. Now ISO/IEC 40500.</span></li><li><a href="https://cxl.com/blog/better-way-prioritize-ab-tests/">CXL</a> — <strong>PXL</strong><span class="claim">Binary, evidence-weighted prioritisation designed to remove the subjectivity of 1-10 ICE/PIE scoring.</span></li><li><a href="https://cxl.com/blog/net-value-ab-testing/">CXL</a> — <strong>~50%</strong><span class="claim">A naive gross uplift projection fell to roughly half once false winners and magnitude error were corrected for.</span></li></ul>
+  </div>
+</div>
+<div class="footer">
+  Prepared by <strong>The CRO Panel</strong> · <a href="mailto:"></a> · <a href="methodology.html">Method &amp; confidence</a>
+</div>
+<div class="modal-overlay" id="modal-root"><div class="modal-box"></div></div>
+<script>
+(function(){
+  var root=document.getElementById('modal-root');
+  function close(){root.classList.remove('open');}
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-m]');
+    if(b){var t=document.getElementById('m-'+b.getAttribute('data-m'));
+      if(t){root.querySelector('.modal-box').innerHTML=
+        '<button class="modal-close" aria-label="Close">\u00d7</button>'+t.innerHTML;
+        root.classList.add('open');}return;}
+    if(e.target.closest('.modal-close')||e.target===root)close();
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  /* The miniature is markup authored at 1280px, scaled to the card width.
+     Real screenshots on a narrow viewport are stacked at full width instead,
+     so scaling them would shrink them to about a third of the card. The inline
+     transform has to be cleared as well as skipped, because a resize past the
+     breakpoint leaves the previous value behind. */
+  function scale(){
+    var stack=window.matchMedia('(max-width: 700px)').matches;
+    document.querySelectorAll('.card-preview .preview-inner').forEach(function(el){
+      var host=el.parentElement;if(!host)return;
+      if(stack&&el.classList.contains('photo')){
+        el.style.transform='';host.style.height='';return;}
+      var w=host.clientWidth;if(!w)return;
+      var s=w/1280;el.style.transform='scale('+s+')';
+      host.style.height=Math.round(514*s)+'px';});
+  }
+  scale();window.addEventListener('resize',scale);
+  function pos(){
+    document.querySelectorAll('.shot-scroll[data-frac]').forEach(function(el){
+      var img=el.querySelector('img');
+      var go=function(){var f=parseFloat(el.getAttribute('data-frac'))||0;
+        el.scrollTop=f*(el.scrollHeight-el.clientHeight);};
+      if(img&&!img.complete){img.addEventListener('load',go);}else{go();}
+    });
+  }
+  pos();
+})();
+</script>
+</body>
+</html>
