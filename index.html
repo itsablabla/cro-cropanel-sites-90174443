@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>nomadinternet.com — CRO Recommendations</title>
+<link rel="stylesheet" href="cro_system.css">
+<style>:root{--green:#995c00;--teal:#ffb23d;--navy:#1f180c;--mid:#2d2213;--light:#3f311c;--muted:#a79c8b;--off:#e5e1dc;}</style></head>
+<body>
+<header>
+  <a class="logo-area" href="index.html" style="text-decoration:none">
+    <div class="logo-dot">N</div>
+    <div>
+      <div class="logo-text">nomadinternet.com</div>
+      <div class="logo-sub">CRO Recommendations — August 2026</div>
+    </div>
+  </a>
+  <nav class="nav"><a href="index.html" class="active">Overview</a><a href="social.html">Social</a><a href="roadmap.html">Roadmap</a><a href="technical.html">Technical</a><a href="appendix.html">Findings</a><a href="methodology.html">Method</a></nav>
+</header>
+
+<div class="hero">
+  <div class="hero-eyebrow">CRO Page Prioritization</div>
+  <h1>Where the Conversion<br>Leaks Are</h1>
+  <p>The most valuable conversion mechanism on this site is guiding users through the plan selection and qualification process. This mechanism is bleeding value due to severe performance issues, where the &quot;Largest Contentful Paint is 46.4 seconds on mobile,&quot; causing users to abandon before engaging, and further hampered by a confusing user journey where &quot;multiple competing primary CTAs&quot; create ambiguity about how to proceed.</p>
+  <div class="hero-meta">
+    <span>7 analysts</span><span class="dot"></span>
+    <span>['/', '/pages/state-florida-residential-wireless-internet-service', '/pages/plans', '/pages/rural-internet', '/plans'] pages</span><span class="dot"></span>
+    <span>10 findings</span><span class="dot"></span>
+    <span><a href="roadmap.html" style="color:var(--teal);text-decoration:none">4-week roadmap →</a></span>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="section" style="padding-top:0">
+    <div class="scorecard">
+      <div class="grade-dial">
+        <div class="grade-letter">C</div>
+        <div class="grade-score">75 / 100 overall</div>
+        <button class="explain" data-m="grade">How is this calculated?</button>
+      </div>
+      <div class="surface-rows">
+        <div class="surface-legend">Per-surface grade — longer bar means more
+          conversion risk found on that surface</div>
+        <div class="surface-row"><div class="sname">Performance</div><div class="bar-track"><div class="bar-fill bad" style="width:52%"></div></div><div class="sgrade">F</div></div><div class="surface-row"><div class="sname">Pricing &amp; Plans</div><div class="bar-track"><div class="bar-fill warn" style="width:77%"></div></div><div class="sgrade">C</div></div><div class="surface-row"><div class="sname">Homepage</div><div class="bar-track"><div class="bar-fill " style="width:95%"></div></div><div class="sgrade">A</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:0;border-top:none">
+    <div class="tiles">
+      <div class="tile"><div class="tval">2.0 – 9.4</div>
+        <div class="tlabel">orders per 1,000 visitors</div><button class="explain" data-m="opp">How is this calculated?</button></div>
+      <div class="tile"><div class="tval">6</div>
+        <div class="tlabel">Verified by measurement</div><button class="explain" data-m="ver">What counts as verified?</button></div>
+      <div class="tile"><div class="tval">1</div><div class="tlabel">Urgent</div><div class="tnote">Blocking or misrepresenting the primary path.</div></div>
+      <div class="tile"><div class="tval">2</div>
+        <div class="tlabel">Shippable this week</div>
+        <div class="tnote">Low-effort changes — start here.</div></div>
+    </div>
+    <div class="coverage"><strong>Also examined, no material issue found:</strong> Navigation &amp; Information Scent. The grade reflects the findings that survived this run’s integrity checks — it is a snapshot of this audit, not a fixed property of the site.</div>
+    <div class="dl-row">
+      <a class="btn-dl" href="executive-summary.pdf" download>Executive summary (PDF)</a>
+      <a class="btn-dl" href="report-deck.pptx" download>Slide deck (PPTX)</a>
+      <a class="btn-dl" href="backlog.csv" download>Backlog (CSV)</a>
+      <a class="btn-dl" href="backlog.json" download>Backlog (JSON)</a>
+    </div>
+  </div>
+</div>
+
+<div class="cards-section">
+  <div class="section-label">Before &amp; After — click any card for evidence, math and the dev spec</div>
+  <div class="cards"><a class="card" href="finding_1_lab_largest_contentful_paint_46_4s_mobile.html">
+      <div class="card-preview photo"><div class="preview-inner photo">
+        <div class="preview-half">
+          <div class="preview-bar bar-red">Current</div><div class="shotwrap"><img class="shot" src="shot_before_0_slow_mobile_lcp.jpg" alt="" loading="lazy"></div>
+        </div>
+        <div class="preview-divider"></div>
+        <div class="preview-half">
+          <div class="preview-bar bar-green">Recommended</div>
+          <div class="shotwrap"><img class="shot" src="shot_after_0_slow_mobile_lcp.jpg" alt="" loading="lazy"></div>
+        </div>
+      </div></div>
+      <div class="card-body">
+        <div class="card-priority">
+          <div class="priority-num num-urgent">1</div>
+          <div class="priority-label label-urgent">Urgent</div>
+        </div>
+        <h2>Slow Mobile LCP</h2>
+        <p>The page&#x27;s main content takes an excessive 46.4 seconds to appear on mobile, causing most visitors to bounce.</p>
+        <div class="badge-row" style="margin-bottom:14px"><span class="badge badge-effort">Medium effort</span><span class="badge badge-verified">Measured</span></div>
+        <span class="card-link">Full analysis <span class="arrow">→</span></span>
+      </div></a><a class="card" href="finding_2_lab_cumulative_layout_shift_0_73_mobile.html">
+      <div class="card-preview photo"><div class="preview-inner photo">
+        <div class="preview-half">
+          <div class="preview-bar bar-red">Current</div><div class="shotwrap"><img class="shot" src="shot_before_1_mobile_layout_shifts.jpg" alt="" loading="lazy"></div>
+        </div>
+        <div class="preview-divider"></div>
+        <div class="preview-half">
+          <div class="preview-bar bar-green">Recommended</div>
+          <div class="shotwrap"><img class="shot" src="shot_after_1_mobile_layout_shifts.jpg" alt="" loading="lazy"></div>
+        </div>
+      </div></div>
+      <div class="card-body">
+        <div class="card-priority">
+          <div class="priority-num num-high">2</div>
+          <div class="priority-label label-high">High</div>
+        </div>
+        <h2>Mobile Layout Shifts</h2>
+        <p>Significant layout shifts during mobile page load cause mis-taps and a frustrating user experience.</p>
+        <div class="badge-row" style="margin-bottom:14px"><span class="badge badge-effort">Medium effort</span><span class="badge badge-verified">Measured</span></div>
+        <span class="card-link">Full analysis <span class="arrow">→</span></span>
+      </div></a><a class="card" href="finding_3_lab_total_blocking_time_2140ms_mobile.html">
+      <div class="card-preview photo"><div class="preview-inner photo">
+        <div class="preview-half">
+          <div class="preview-bar bar-red">Current</div><div class="shotwrap"><img class="shot" src="shot_before_2_mobile_main_thread_blocked.jpg" alt="" loading="lazy"></div>
+        </div>
+        <div class="preview-divider"></div>
+        <div class="preview-half">
+          <div class="preview-bar bar-green">Recommended</div>
+          <div class="shotwrap"><img class="shot" src="shot_after_2_mobile_main_thread_blocked.jpg" alt="" loading="lazy"></div>
+        </div>
+      </div></div>
+      <div class="card-body">
+        <div class="card-priority">
+          <div class="priority-num num-high">3</div>
+          <div class="priority-label label-high">High</div>
+        </div>
+        <h2>Mobile Main Thread Blocked</h2>
+        <p>Excessive script execution freezes the main thread for 2,140 ms on mobile, making the page unresponsive during load.</p>
+        <div class="badge-row" style="margin-bottom:14px"><span class="badge badge-effort">Medium effort</span><span class="badge badge-verified">Measured</span></div>
+        <span class="card-link">Full analysis <span class="arrow">→</span></span>
+      </div></a><a class="card" href="finding_4_heavy_third_party_script_load.html">
+      <div class="card-preview photo"><div class="preview-inner photo">
+        <div class="preview-half">
+          <div class="preview-bar bar-red">Current</div><div class="shotwrap"><img class="shot" src="shot_before_3_heavy_third_party_scripts.jpg" alt="" loading="lazy"></div>
+        </div>
+        <div class="preview-divider"></div>
+        <div class="preview-half">
+          <div class="preview-bar bar-green">Recommended</div>
+          <div class="shotwrap"><img class="shot" src="shot_after_3_heavy_third_party_scripts.jpg" alt="" loading="lazy"></div>
+        </div>
+      </div></div>
+      <div class="card-body">
+        <div class="card-priority">
+          <div class="priority-num num-high">4</div>
+          <div class="priority-label label-high">High</div>
+        </div>
+        <h2>Heavy Third-Party Scripts</h2>
+        <p>The homepage loads 65 scripts, which is the usual root cause of slow interaction readiness on mobile.</p>
+        <div class="badge-row" style="margin-bottom:14px"><span class="badge badge-effort">Medium effort</span><span class="badge badge-verified">Measured</span></div>
+        <span class="card-link">Full analysis <span class="arrow">→</span></span>
+      </div></a><a class="card" href="finding_5_lab_largest_contentful_paint_6_1s_mobile_blog.html">
+      <div class="card-preview photo"><div class="preview-inner photo">
+        <div class="preview-half">
+          <div class="preview-bar bar-red">Current</div><div class="shotwrap"><img class="shot" src="shot_before_4_slow_blog_lcp_mobile.jpg" alt="" loading="lazy"></div>
+        </div>
+        <div class="preview-divider"></div>
+        <div class="preview-half">
+          <div class="preview-bar bar-green">Recommended</div>
+          <div class="shotwrap"><img class="shot" src="shot_after_4_slow_blog_lcp_mobile.jpg" alt="" loading="lazy"></div>
+        </div>
+      </div></div>
+      <div class="card-body">
+        <div class="card-priority">
+          <div class="priority-num num-high">5</div>
+          <div class="priority-label label-high">High</div>
+        </div>
+        <h2>Slow Blog LCP Mobile</h2>
+        <p>Measured in a lab load on /blogs/countrynomad/content-delivery-network-cdn: the page&#x27;s main content takes this long to appear on a mid-range</p>
+        <div class="badge-row" style="margin-bottom:14px"><span class="badge badge-effort">Medium effort</span><span class="badge badge-verified">Measured</span></div>
+        <span class="card-link">Full analysis <span class="arrow">→</span></span>
+      </div></a><a class="card" href="finding_6_lab_cumulative_layout_shift_0_265_mobile_blog.html">
+      <div class="card-preview photo"><div class="preview-inner photo">
+        <div class="preview-half">
+          <div class="preview-bar bar-red">Current</div><div class="shotwrap"><img class="shot" src="shot_before_5_blog_mobile_layout_shifts.jpg" alt="" loading="lazy"></div>
+        </div>
+        <div class="preview-divider"></div>
+        <div class="preview-half">
+          <div class="preview-bar bar-green">Recommended</div>
+          <div class="shotwrap"><img class="shot" src="shot_after_5_blog_mobile_layout_shifts.jpg" alt="" loading="lazy"></div>
+        </div>
+      </div></div>
+      <div class="card-body">
+        <div class="card-priority">
+          <div class="priority-num num-high">6</div>
+          <div class="priority-label label-high">High</div>
+        </div>
+        <h2>Blog Mobile Layout Shifts</h2>
+        <p>Measured in a lab load on /blogs/countrynomad/content-delivery-network-cdn: the layout jumps while loading, causing mis-taps on the very but</p>
+        <div class="badge-row" style="margin-bottom:14px"><span class="badge badge-effort">Medium effort</span><span class="badge badge-verified">Measured</span></div>
+        <span class="card-link">Full analysis <span class="arrow">→</span></span>
+      </div></a></div>
+</div>
+
+<div class="wrap">
+<div class="section">
+  <div class="eyebrow-label">Voice of customer</div>
+  <h2 class="section-title">What customers actually say</h2>
+  <p class="section-intro">Gathered from third-party reviews, forums and video —
+    the site’s own pages are excluded. Every quote was verified word-for-word
+    against the page it links to; anything that could not be verified was
+    discarded rather than paraphrased.</p>
+  <h3 class="sub-title">Said before buying — these are conversion problems</h3><div class="voice-grid"><div class="voice-card"><div class="voice-theme">Undisclosed or Unexpected Charges</div><blockquote class="voice-quote">I was given the impression I was purchasing an internet router and signing up for a monthly service at $99. Instead, I was hit with a surprise charge of $139 just a few months later, $40 more than expected, without any prior notice given that my rate was going up.</blockquote><div class="voice-src">— <a href="https://gratefulglamper.com/nomad-internet-review" target="_blank" rel="noopener">gratefulglamper.com</a></div><div class="voice-means">Prospects are confused by the true cost of the service, leading to dissatisfaction when the bill is higher than expected.</div></div><div class="voice-card"><div class="voice-theme">Misrepresentation of Product Details</div><blockquote class="voice-quote">Before I ordered from them, I asked what carriers they used, as we have no 5G for Verizon in our area. They said they would ship two Sims with the modem and I could pick whichever had the better coverage. Paid for the modem and plan, and received a Verizon modem and Sim.</blockquote><div class="voice-src">— <a href="https://ie.trustpilot.com/review/nomadinternet.com?page=2" target="_blank" rel="noopener">ie.trustpilot.com</a></div><div class="voice-means">Prospects make purchasing decisions based on incorrect information about product compatibility or features, leading to receiving an unusable product.</div></div><div class="voice-card"><div class="voice-theme">Deceptive Influencer Marketing</div><blockquote class="voice-quote">many of the other influencers have now done videos saying we were conned and I guess I&#x27;m kind of going to add the same one here I was conned into believing that they really were ending all of those service issues that people were happy they aren&#x27;t they weren&#x27;t and I can&#x27;t be associated with these gu</blockquote><div class="voice-src">— <a href="https://www.youtube.com/watch?v=b9s1mz3NI2M" target="_blank" rel="noopener">youtube.com</a></div><div class="voice-means">Prospects are misled by seemingly positive reviews from influencers, creating false expectations about service quality and reliability.</div></div><div class="voice-card"><div class="voice-theme">Order Fulfillment Delays and Uncertainty</div><blockquote class="voice-quote">Unfortunately, I still have not received my system. Though I viewed 3 influencer with extremely positive reviews, further research, I am seeing multiple complaints including BBB regarding customer service. While I am connecting with customer support, I am not getting any information why my order has</blockquote><div class="voice-src">— <a href="https://gratefulglamper.com/nomad-internet-review" target="_blank" rel="noopener">gratefulglamper.com</a></div><div class="voice-means">Prospects experience anxiety and loss of confidence when their purchased equipment is not delivered as expected, delaying their ability to use the service.</div></div><div class="voice-card"><div class="voice-theme">Legal Troubles and Reputation Risk</div><blockquote class="voice-quote">its legal troubles and customer satisfaction ratings are definitely worth considering before signing up.</blockquote><div class="voice-src">— <a href="https://www.cnet.com/home/internet/nomad-internet-review" target="_blank" rel="noopener">cnet.com</a></div><div class="voice-means">Prospects perceive a significant risk due to the company&#x27;s legal issues and poor reputation, causing hesitation before committing to a purchase.</div></div></div>
+</div></div>
+<div class="footer">
+  Prepared by <strong>The CRO Panel</strong> · <a href="mailto:"></a> · <a href="methodology.html">Method &amp; confidence</a>
+</div>
+<div class="modal-overlay" id="modal-root"><div class="modal-box"></div></div>
+<template id="m-grade"><h3>How the grade is calculated</h3><p>Each surface starts at 100. The worst issue costs its full penalty — Urgent 25, High 12, Medium 5 — and each further issue costs 30% less than the one before, because the fifth problem on a page does not damage it as much as the first.</p><div class="formula">surface = 100 − Σ penalty × 0.7ⁱ&nbsp;&nbsp;(worst first)
+overall = mean of surface scores</div><table><tr><th>Surface</th><th>Urgent</th><th>High</th><th>Score</th><th>Grade</th></tr><tr><td>Performance</td><td class='num'>1</td><td class='num'>5</td><td class='num'>52</td><td class='num'>F</td></tr><tr><td>Pricing &amp; Plans</td><td class='num'>0</td><td class='num'>3</td><td class='num'>77</td><td class='num'>C</td></tr><tr><td>Homepage</td><td class='num'>0</td><td class='num'>1</td><td class='num'>95</td><td class='num'>A</td></tr></table><p>Grades: A 90+, B 80+, C 70+, D 60+, F below 60.</p></template><template id="m-opp"><h3>How the total is calculated</h3><p>The sum of every finding's individual range. Each row is traffic × conversion × assumed lift band × order value:</p><table><tr><th>Finding</th><th>Lift band</th><th>Range</th></tr><tr><td>Slow Mobile LCP</td><td class='num'>2.0–8.0%</td><td class='num'>0.4–1.6/1k</td></tr><tr><td>Mobile Layout Shifts</td><td class='num'>1.0–5.0%</td><td class='num'>0.2–1.0/1k</td></tr><tr><td>Mobile Main Thread Blocked</td><td class='num'>1.0–5.0%</td><td class='num'>0.2–1.0/1k</td></tr><tr><td>Heavy Third-Party Scripts</td><td class='num'>1.0–5.0%</td><td class='num'>0.2–1.0/1k</td></tr><tr><td>Slow Blog LCP Mobile</td><td class='num'>1.0–5.0%</td><td class='num'>0.2–1.0/1k</td></tr><tr><td>Blog Mobile Layout Shifts</td><td class='num'>1.0–5.0%</td><td class='num'>0.2–1.0/1k</td></tr><tr><td>Generic Value Proposition</td><td class='num'>0.5–2.0%</td><td class='num'>0.1–0.4/1k</td></tr><tr><td>Inconsistent Pricing Display</td><td class='num'>1.0–5.0%</td><td class='num'>0.2–1.0/1k</td></tr><tr><td>Unclear One-Time Fees</td><td class='num'>1.0–5.0%</td><td class='num'>0.2–1.0/1k</td></tr><tr><td>Competing Primary CTAs</td><td class='num'>0.5–2.0%</td><td class='num'>0.1–0.4/1k</td></tr></table><p><strong>No traffic or order-value figures were supplied</strong>, so the total is a per-1,000-visitor rate against an assumed 2% baseline. Supply real figures and this becomes a dollar range.</p><p><strong>Caveat that applies to every row:</strong> Across 127,000 experiments, 12% produced a statistically significant improvement on the primary metric; a healthy programme win rate is 10-30%. These are prizes if changes work, not forecasts.</p></template><template id="m-ver"><h3>What &#x27;verified&#x27; means</h3><p>A verified finding was measured directly — real-user field data, security headers, accessibility defects counted in the markup — and is reproducible by anyone. Everything else is expert inspection: valuable, but a hypothesis until tested.</p></template><script>
+(function(){
+  var root=document.getElementById('modal-root');
+  function close(){root.classList.remove('open');}
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-m]');
+    if(b){var t=document.getElementById('m-'+b.getAttribute('data-m'));
+      if(t){root.querySelector('.modal-box').innerHTML=
+        '<button class="modal-close" aria-label="Close">\u00d7</button>'+t.innerHTML;
+        root.classList.add('open');}return;}
+    if(e.target.closest('.modal-close')||e.target===root)close();
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  /* The miniature is markup authored at 1280px, scaled to the card width.
+     Real screenshots on a narrow viewport are stacked at full width instead,
+     so scaling them would shrink them to about a third of the card. The inline
+     transform has to be cleared as well as skipped, because a resize past the
+     breakpoint leaves the previous value behind. */
+  function scale(){
+    var stack=window.matchMedia('(max-width: 700px)').matches;
+    document.querySelectorAll('.card-preview .preview-inner').forEach(function(el){
+      var host=el.parentElement;if(!host)return;
+      if(stack&&el.classList.contains('photo')){
+        el.style.transform='';host.style.height='';return;}
+      var w=host.clientWidth;if(!w)return;
+      var s=w/1280;el.style.transform='scale('+s+')';
+      host.style.height=Math.round(514*s)+'px';});
+  }
+  scale();window.addEventListener('resize',scale);
+  function pos(){
+    document.querySelectorAll('.shot-scroll[data-frac]').forEach(function(el){
+      var img=el.querySelector('img');
+      var go=function(){var f=parseFloat(el.getAttribute('data-frac'))||0;
+        el.scrollTop=f*(el.scrollHeight-el.clientHeight);};
+      if(img&&!img.complete){img.addEventListener('load',go);}else{go();}
+    });
+  }
+  pos();
+})();
+</script>
+</body>
+</html>
