@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slow Blog LCP Mobile — nomadinternet.com</title>
+<link rel="stylesheet" href="cro_system.css">
+<style>:root{--green:#995c00;--teal:#ffb23d;--navy:#1f180c;--mid:#2d2213;--light:#3f311c;--muted:#a79c8b;--off:#e5e1dc;}</style></head>
+<body>
+<header>
+  <a class="logo-area" href="index.html" style="text-decoration:none">
+    <div class="logo-dot">N</div>
+    <div>
+      <div class="logo-text">nomadinternet.com</div>
+      <div class="logo-sub">CRO Recommendations — August 2026</div>
+    </div>
+  </a>
+  <nav class="nav"><a href="index.html">Overview</a><a href="social.html">Social</a><a href="roadmap.html">Roadmap</a><a href="technical.html">Technical</a><a href="appendix.html">Findings</a><a href="methodology.html">Method</a></nav>
+</header>
+
+<div class="wrap">
+  <div class="finding-head">
+    <div class="badge-row">
+      <span class="rank-chip rank-high">5</span>
+      <span class="badge badge-high">High</span>
+      <span class="badge badge-effort">Performance</span>
+      <span class="badge badge-verified">Verified by measurement</span>
+    </div>
+    <h1>Slow Blog LCP Mobile</h1>
+    <p class="thesis">Measured in a lab load on /blogs/countrynomad/content-delivery-network-cdn: the page&#x27;s main content takes this long to appear on a mid-range phone; most visitors have bounced long before.</p>
+  </div>
+  
+  <div class="section" style="padding-top:0;border-top:none">
+    <div class="split">
+      <div class="col">
+        <div class="label-bar label-current">CURRENT — Slow LCP mobile</div>
+        <div class="shotwrap photo-side"><img class="shot-pair" src="shot_before_4_slow_blog_lcp_mobile.jpg" alt="Screenshot" loading="lazy"><div class="shot-tag"><strong>⚠ Slow Blog LCP Mobile</strong>The main content takes 6.1 seconds to appear on mobile, far exceeding the 2.5s &#x27;good&#x27; threshold, causing most visitors …</div></div>
+      </div>
+      <div class="divider"></div>
+      <div class="col">
+        <div class="label-bar label-recommended">RECOMMENDED — LCP warning badge</div>
+        <div class="shotwrap photo-side"><img class="shot-pair" src="shot_after_4_slow_blog_lcp_mobile.jpg" alt="Screenshot" loading="lazy"><div class="diff-chips chips-overlay"><span class="chip">Add LCP badge</span></div></div>
+      </div>
+    </div>
+    <div class="fix-bar"><strong>Fix</strong>Add a visible performance warning badge to the hero heading, alerting stakeholders to the slow LCP and prompting optimization.</div>
+    <div class="photo-note">Both are photographs of the live page — the right side has the
+      change applied in the browser.</div>
+  </div>
+  
+<div class="section">
+  <div class="eyebrow-label">Evidence</div>
+  <h2 class="section-title">Observed on the live site <span class="badge badge-verified">Verified by measurement</span></h2>
+  <div class="agreement">✓ Flagged independently by 1 of 7 analysts</div>
+  <ul class="evidence-list"><li>Lighthouse (mobile emulation, single synthetic run via DataForSEO): Largest Contentful Paint 6.1 s against a ‘good’ threshold of 2500ms. Lab data, not real-user field data — confirms the defect class, not the field percentile.</li></ul>
+</div>
+  
+<div class="section">
+  <div class="eyebrow-label">Business case</div>
+  <h2 class="section-title">If this change wins</h2>
+  <div class="tiles" style="grid-template-columns:repeat(3,1fr)">
+    <div class="tile">
+      <div class="tval">0.2 – 1.0</div>
+      <div class="tlabel">orders per 1,000 visitors</div>
+      <button class="explain" data-m="size-5">How is this calculated?</button>
+    </div>
+    <div class="tile">
+      <div class="tval">Medium</div>
+      <div class="tlabel">Effort — 2-5 days</div>
+      <button class="explain" data-m="eff-5">What does this mean?</button>
+    </div>
+    <div class="tile"><div class="tval" style="font-size:20px">Not A/B testable</div><div class="tlabel">At typical traffic</div><div class="tnote">Detecting this needs about 315,206 visitors per variant. Ship it as a sequenced change and log the date instead.</div><button class="explain" data-m="test-5">How is this calculated?</button></div>
+  </div>
+</div>
+  
+<div class="section">
+  <div class="eyebrow-label">Prioritisation</div>
+  <h2 class="section-title">PXL score: 5 / 10</h2>
+  <button class="explain" data-m="pxl-5">Why these questions?</button>
+  <h3 class="sub-title">Assessed from the live page</h3>
+  <div class="tscroll"><table class="dtable">
+    <thead><tr><th>Question</th><th class="num">Answer</th><th class="num">Points</th></tr></thead>
+    <tbody><tr><td>Is the change above the fold?</td><td class="num yes">Yes</td><td class="num">1</td></tr><tr><td>Is the change noticeable in under 5 seconds?</td><td class="num yes">Yes</td><td class="num">2</td></tr><tr><td>Does it add or remove an element?</td><td class="num yes">Yes</td><td class="num">1</td></tr><tr><td>Does it run on a high-traffic page?</td><td class="num no">No</td><td class="num">0</td></tr><tr><td>Verified by direct technical measurement?</td><td class="num yes">Yes</td><td class="num">1</td></tr></tbody>
+  </table></div>
+  
+  <h3 class="sub-title">Criteria that need your data</h3>
+  <p class="sub-note">4 of these could not be answered from the live page.
+    Session recordings, survey or support themes, and analytics access would
+    raise the confidence of this ranking — they do not indicate a weaker
+    finding.</p>
+  <div class="tscroll"><table class="dtable">
+    <thead><tr><th>Question</th><th class="num">Answer</th><th class="num">Points</th></tr></thead>
+    <tbody><tr><td>Discovered via user testing?</td><td class="num no">No</td><td class="num">0</td></tr><tr><td>Discovered via qualitative feedback (survey, support)?</td><td class="num no">No</td><td class="num">0</td></tr><tr><td>Supported by heatmaps or session recordings?</td><td class="num no">No</td><td class="num">0</td></tr><tr><td>Found via digital analytics or real-user field data?</td><td class="num no">No</td><td class="num">0</td></tr></tbody>
+  </table></div>
+</div>
+  
+<div class="section">
+  <div class="eyebrow-label">Implementation</div>
+  <h2 class="section-title">Hand this to your developer</h2>
+  <div class="dl-row" style="margin:0 0 20px">
+    <a class="btn-dl" href="dev_spec_5_lab_largest_contentful_paint_6_1s_mobile_blog.md" download>Download this spec (.md)</a>
+  </div>
+  <dl class="spec">
+    <dt>Surface</dt><dd>Performance — PERFORMANCE</dd>
+    <dt>Problem</dt><dd>Measured in a lab load on /blogs/countrynomad/content-delivery-network-cdn: the page&#x27;s main content takes this long to appear on a mid-range phone; most visitors have bounced long before.</dd>
+    <dt>Current state</dt><dd>notes: Largest Contentful Paint 6.1 s (lab, mobile on /blogs/countrynomad/content-delivery-network-cdn)</dd>
+    <dt>Change</dt><dd>notes: Largest Contentful Paint ≤ 2500ms (good)</dd>
+    <dt>Acceptance criteria</dt><dd class="mono">GIVEN a first-time visitor on the affected page<br>
+      WHEN the change is live<br>
+      THEN Largest Contentful Paint ≤ 2500ms (good),
+      with no regression at 375px and 1280px widths.</dd>
+    <dt>Tracking</dt><dd class="mono">event: <strong>cro_lab_largest_contentful_paint_6_1s_mo</strong> on interaction with the
+      changed element; verify it fires in BOTH variants before opening traffic.</dd>
+    <dt>Success metric</dt><dd>conversion rate on the affected step</dd>
+    <dt>QA checklist</dt><dd class="mono">Chrome / Safari / Firefox · 375px + 1280px ·
+      keyboard reachable · screen-reader name present · no CLS introduced</dd>
+    <dt>Effort</dt><dd>Medium —
+      2-5 days</dd>
+    <dt>Test plan</dt><dd>315,206 visitors per variant
+      (95% significance, 80% power);
+      duration depends on traffic.</dd>
+    <dt>Rollback</dt><dd>Feature-flag the change; revert the flag if the primary metric
+      drops for 3 consecutive days.</dd>
+  </dl>
+</div>
+  <div class="pager"><a href="finding_4_heavy_third_party_script_load.html">← Heavy Third-Party Scripts</a><a href="finding_6_lab_cumulative_layout_shift_0_265_mobile_blog.html">Blog Mobile Layout Shifts →</a></div>
+</div>
+<div class="footer">
+  Prepared by <strong>The CRO Panel</strong> · <a href="mailto:"></a> · <a href="methodology.html">Method &amp; confidence</a>
+</div>
+<div class="modal-overlay" id="modal-root"><div class="modal-box"></div></div>
+<template id="m-size-5"><h3>How this range is calculated</h3><p>Result: <strong>0.2 – 1.0 extra orders per 1,000 visitors</strong></p><div class="formula">1,000 visitors × baseline conversion × relative lift
+= per 1,000 visitors at an assumed 2.00% baseline conversion rate and a 1.0-5.0% relative lift</div><p>The 1.0–5.0% relative-lift band is an assumption bounded by severity (High), not a prediction.</p><p><strong>The baseline conversion rate is an assumption</strong> — the client did not supply one, so an industry-typical 2.0% is used and labelled as such.</p><p><strong>Why the range is conservative:</strong> Across 127,000 experiments, 12% produced a statistically significant improvement on the primary metric; a healthy programme win rate is 10-30%. Winning tests also overstate their true effect, so treat this as the prize if the change works — never expected revenue.</p></template><template id="m-eff-5"><h3>How effort is estimated</h3><table><tr><th>Bracket</th><th>Days</th><th>Typical scope</th></tr><tr><td>Low</td><td class='num'>0.5–2</td><td>copy, colour, labels, image swaps</td></tr><tr><td>Medium</td><td class='num'>2–5</td><td>layout shifts, form changes, new modules</td></tr><tr><td>High</td><td class='num'>5+</td><td>personalisation, funnel work, integrations</td></tr></table><p>Assigned by matching the recommended change against these scopes; the estimate is a bracket, not a quote.</p></template><template id="m-test-5"><h3>Sample size math</h3><p>Two-proportion z-test, the standard pre-test sample-size calculation:</p><div class="formula">n = [z&#8320;.&#8320;&#8322;&#8325;·√(2·p̄·(1−p̄)) + z&#8320;.&#8322;&#8320;·√(p₁(1−p₁)+p₂(1−p₂))]² / (p₁−p₂)²</div><table><tr><td>Baseline conversion</td><td class='num'>2.0% (assumed)</td></tr><tr><td>Significance / power</td><td class='num'>95% / 80%</td></tr><tr><td>Sample per variant, 5.0% lift</td><td class='num'>315,206</td></tr><tr><td>Sample per variant, 1.0% lift</td><td class='num'>7,729,571</td></tr></table><p>Halving the minimum detectable effect roughly quadruples the sample required, which is why the conservative figure is so much larger.</p></template><template id="m-pxl-5"><h3>What PXL is</h3><p>PXL is CXL's prioritisation framework: binary questions instead of subjective 1–10 guesses, weighted toward evidence.</p><p>Findings discovered by inspection score zero on all four evidence questions — that is the honest signal, not a defect. Findings verified by direct measurement earn the extension point and, where real-user field data is involved, the analytics point.</p><p>The full rubric is on the <a href="methodology.html" style="color:var(--teal)">method page</a>.</p></template><script>
+(function(){
+  var root=document.getElementById('modal-root');
+  function close(){root.classList.remove('open');}
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-m]');
+    if(b){var t=document.getElementById('m-'+b.getAttribute('data-m'));
+      if(t){root.querySelector('.modal-box').innerHTML=
+        '<button class="modal-close" aria-label="Close">\u00d7</button>'+t.innerHTML;
+        root.classList.add('open');}return;}
+    if(e.target.closest('.modal-close')||e.target===root)close();
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  /* The miniature is markup authored at 1280px, scaled to the card width.
+     Real screenshots on a narrow viewport are stacked at full width instead,
+     so scaling them would shrink them to about a third of the card. The inline
+     transform has to be cleared as well as skipped, because a resize past the
+     breakpoint leaves the previous value behind. */
+  function scale(){
+    var stack=window.matchMedia('(max-width: 700px)').matches;
+    document.querySelectorAll('.card-preview .preview-inner').forEach(function(el){
+      var host=el.parentElement;if(!host)return;
+      if(stack&&el.classList.contains('photo')){
+        el.style.transform='';host.style.height='';return;}
+      var w=host.clientWidth;if(!w)return;
+      var s=w/1280;el.style.transform='scale('+s+')';
+      host.style.height=Math.round(514*s)+'px';});
+  }
+  scale();window.addEventListener('resize',scale);
+  function pos(){
+    document.querySelectorAll('.shot-scroll[data-frac]').forEach(function(el){
+      var img=el.querySelector('img');
+      var go=function(){var f=parseFloat(el.getAttribute('data-frac'))||0;
+        el.scrollTop=f*(el.scrollHeight-el.clientHeight);};
+      if(img&&!img.complete){img.addEventListener('load',go);}else{go();}
+    });
+  }
+  pos();
+})();
+</script>
+</body>
+</html>
